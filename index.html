@@ -9,6 +9,12 @@
 </head>
 
 
+
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
 <title>URBANNN STYLEEE</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -28,6 +34,7 @@ style="background-image:url('header.jpg'); background-size:cover; background-pos
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
+
 <body class="">
 
 <!-- HEADER -->
@@ -36,6 +43,9 @@ style="background-image:url('header.jpg'); background-size:cover; background-pos
 <h1></h1>
 <p></p>
 </div>
+
+
+
 
 </header>
 
@@ -55,6 +65,32 @@ style="background-image:url('header.jpg'); background-size:cover; background-pos
 </nav>
 
 <!-- MAIN CONTENT -->
+
+<main id="mainContent" class="md:col-span-7 bg-white rounded-xl shadow p-8">
+
+<div class="relative w-full rounded-lg overflow-hidden mb-6">
+
+<img src="https://i.pinimg.com/1200x/6c/4a/9c/6c4a9c1141dd4de8b9fd61adb15ff081.jpg"
+class="w-full h-64 object-cover">
+
+<div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white p-4">
+
+<h2 class="text-2xl md:text-3xl font-bold">
+Selamat datang di toko kami
+</h2>
+
+<p class="mt-2 text-sm md:text-lg">
+Selamat berbelanja dan temukan pakaian favorit kamu!
+</p>
+
+</div>
+</div>
+
+<p class="text-gray-600 text-center md:text-left">
+Kesenangan pelanggan nomor 1.
+</p>
+
+
 <main id="">
 <div class="">
 <img src="">
@@ -65,6 +101,7 @@ style="background-image:url('header.jpg'); background-size:cover; background-pos
 </div>
 
 <p></p>
+
 </main>
 
 <!-- ASIDE -->
@@ -79,9 +116,97 @@ style="background-image:url('header.jpg'); background-size:cover; background-pos
 
 const products = {
 
+
+wanita: [
+{name:"Dress Floral", bahan:"Katun Premium", img:"dress bunga.jpg"},
+{name:"Blouse Korea", bahan:"Sifon", img:"kemeja colour.jpg"},
+{name:"Rok Plisket", bahan:"Polyester", img:"rok.jpg"},
+{name:"Tunik Modern", bahan:"Katun", img:"dres tunik.jpg"},
+{name:"Dress Pink", bahan:"Katun", img:"dress pink.jpg"},
+{name:"Atasan Batik", bahan:"Katun", img:"dress batik.jpg"},
+{name:"Rok Polkadot", bahan:"Wol", img:"rok polkadot.jpg"},
+{name:"Floral Blouse", bahan:"Polyester", img:"daster bunga.jpg"}
+],
+
+pria: [
+{name:"Kemeja Slim Fit", bahan:"Katun", img:"kemeja putih.jpg"},
+{name:"Kaos Oversize", bahan:"Cotton", img:"kaos.jpg"},
+{name:"Celana Chino", bahan:"Chino", img:"celana chino.jpg"},
+{name:"Hoodie Casual", bahan:"Fleece", img:"hoodie casual.jpg"}
+],
+
+jaket: [
+{name:"Jaket Varsity", bahan:"Wol", img:"jaket varsity.jpg"},
+{name:"Bomber Jacket", bahan:"Nylon", img:"bomber jacket.jpg"},
+{name:"Jaket Parka", bahan:"Tebal", img:"jaket parka.jpg"},
+{name:"Jaket Denim", bahan:"Denim", img:"jaket denim.jpg"}
+],
+
+celana: [
+{name:"Celana Cargo", bahan:"Katun", img:"celana cargo.jpg"},
+{name:"Jeans Slim Fit", bahan:"Denim", img:"celana jeans.jpg"},
+{name:"Celana Training", bahan:"Polyester", img:"celana jogger.jpg"},
+{name:"Celana Kulot", bahan:"Katun", img:"celana plisket.jpg"}
+]
+
+
 };
 
 function showCategory(category){
+
+const trending = document.getElementById("trendingContent");
+
+trending.innerHTML = `
+<h3 class="text-sm font-semibold uppercase tracking-wider mb-4">
+Trending Produk
+</h3>
+`;
+
+products[category].forEach(product => {
+
+trending.innerHTML += `
+
+<div onclick="showProduct('${product.name}','${product.bahan}','${product.img}')"
+class="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-100 rounded mb-2">
+
+<img src="${product.img}" class="w-10 h-10 object-cover rounded">
+
+<div>
+<p class="text-sm font-medium">${product.name}</p>
+<p class="text-xs text-gray-500">Bahan: ${product.bahan}</p>
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+function showProduct(name,bahan,img){
+
+const main = document.getElementById("mainContent");
+
+main.innerHTML = `
+
+<img src="${img}" class="w-full h-72 object-cover rounded-lg mb-4">
+
+<h2 class="text-xl font-bold mb-1">${name}</h2>
+
+<p class="text-gray-600 mb-2">
+Bahan: ${bahan}
+</p>
+
+<p class="text-gray-600">
+${name} dengan desain modern dan nyaman dipakai.
+</p>
+
+`;
+
+}
+
+</script>
 
 }
 
@@ -198,6 +323,7 @@ Klik kategori di sebelah kiri untuk melihat produk yang tersedia.
 
 </aside>
 
+
 <!-- FOOTER -->
 <footer class="">
 
@@ -241,4 +367,8 @@ Klik kategori di sebelah kiri untuk melihat produk yang tersedia.
 </footer>
 
 </body>
+
+     </html>
+
 </html>
+
