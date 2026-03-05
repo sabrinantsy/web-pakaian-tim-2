@@ -1,4 +1,4 @@
-<h1>Website Toko Pakaian</h1>
+<h1>URBANN STYLEE</h1>
 
 <p>
 Proyek ini adalah website sederhana untuk menampilkan kategori pakaian seperti
@@ -13,7 +13,7 @@ HTML dan Tailwind CSS untuk tampilan yang lebih rapi.
   <li>Tampilan bersih dan mudah digunakan</li>
 </ul>
 
-<h2>Kategori Pakaian</h2>
+<h2>Fashion Categories</h2>
 <ul>
   <li>Pakaian Wanita</li>
   <li>Pakaian Pria</li>
@@ -27,4 +27,5 @@ HTML dan Tailwind CSS untuk tampilan yang lebih rapi.
   <li> Nurul Aliza Lubis (Header) </li>
   <li> Sabrina Natasya (Navigation) </li>
   <li> Selfiana Putri (Aside) </li>
-  <li> Muhammad Raziq & Iqbal Ramadan (content) </li>
+  <li> Muhammad Khairur Raziq  (Content) </li>
+<li>  Iqbal Ramadan (Main) </li>
