@@ -71,13 +71,91 @@ Kesenangan pelanggan nomor 1.
 
 const products = {
 
+wanita: [
+{name:"Dress Floral", bahan:"Katun Premium", img:"dress bunga.jpg"},
+{name:"Blouse Korea", bahan:"Sifon", img:"kemeja colour.jpg"},
+{name:"Rok Plisket", bahan:"Polyester", img:"rok.jpg"},
+{name:"Tunik Modern", bahan:"Katun", img:"dres tunik.jpg"},
+{name:"Dress Pink", bahan:"Katun", img:"dress pink.jpg"},
+{name:"Atasan Batik", bahan:"Katun", img:"dress batik.jpg"},
+{name:"Rok Polkadot", bahan:"Wol", img:"rok polkadot.jpg"},
+{name:"Floral Blouse", bahan:"Polyester", img:"daster bunga.jpg"}
+],
+
+pria: [
+{name:"Kemeja Slim Fit", bahan:"Katun", img:"kemeja putih.jpg"},
+{name:"Kaos Oversize", bahan:"Cotton", img:"kaos.jpg"},
+{name:"Celana Chino", bahan:"Chino", img:"celana chino.jpg"},
+{name:"Hoodie Casual", bahan:"Fleece", img:"hoodie casual.jpg"}
+],
+
+jaket: [
+{name:"Jaket Varsity", bahan:"Wol", img:"jaket varsity.jpg"},
+{name:"Bomber Jacket", bahan:"Nylon", img:"bomber jacket.jpg"},
+{name:"Jaket Parka", bahan:"Tebal", img:"jaket parka.jpg"},
+{name:"Jaket Denim", bahan:"Denim", img:"jaket denim.jpg"}
+],
+
+celana: [
+{name:"Celana Cargo", bahan:"Katun", img:"celana cargo.jpg"},
+{name:"Jeans Slim Fit", bahan:"Denim", img:"celana jeans.jpg"},
+{name:"Celana Training", bahan:"Polyester", img:"celana jogger.jpg"},
+{name:"Celana Kulot", bahan:"Katun", img:"celana plisket.jpg"}
+]
+
 };
 
 function showCategory(category){
 
+const trending = document.getElementById("trendingContent");
+
+trending.innerHTML = `
+<h3 class="text-sm font-semibold uppercase tracking-wider mb-4">
+Trending Produk
+</h3>
+`;
+
+products[category].forEach(product => {
+
+trending.innerHTML += `
+
+<div onclick="showProduct('${product.name}','${product.bahan}','${product.img}')"
+class="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-100 rounded mb-2">
+
+<img src="${product.img}" class="w-10 h-10 object-cover rounded">
+
+<div>
+<p class="text-sm font-medium">${product.name}</p>
+<p class="text-xs text-gray-500">Bahan: ${product.bahan}</p>
+</div>
+
+</div>
+
+`;
+
+});
+
 }
 
 function showProduct(name,bahan,img){
+
+const main = document.getElementById("mainContent");
+
+main.innerHTML = `
+
+<img src="${img}" class="w-full h-72 object-cover rounded-lg mb-4">
+
+<h2 class="text-xl font-bold mb-1">${name}</h2>
+
+<p class="text-gray-600 mb-2">
+Bahan: ${bahan}
+</p>
+
+<p class="text-gray-600">
+${name} dengan desain modern dan nyaman dipakai.
+</p>
+
+`;
 
 }
 
@@ -126,4 +204,4 @@ function showProduct(name,bahan,img){
 </footer>
 
 </body>
-  </html>
+     </html>
