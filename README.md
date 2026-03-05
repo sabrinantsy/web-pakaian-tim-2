@@ -3,7 +3,7 @@
 <p>
 Proyek ini adalah website sederhana untuk menampilkan kategori pakaian seperti
 pakaian wanita, pakaian pria, jaket, dan celana. Website ini dibuat menggunakan
-HTML dan Tailwind CSS untuk tampilan yang lebih rapi.
+HTML dan Tailwind CSS untuk tampilan yang lebih rapi
 </p>
 
 <h2>Fitur Website</h2>
