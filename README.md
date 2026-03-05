@@ -3,7 +3,7 @@
 <p>
 Proyek ini adalah website sederhana untuk menampilkan kategori pakaian seperti
 pakaian wanita, pakaian pria, jaket, dan celana. Website ini dibuat menggunakan
-HTML dan Tailwind CSS untuk tampilan yang lebih rapi
+HTML dan Tailwind CSS untuk tampilan yang lebih rapi.
 </p>
 
 <h2>Fitur Website</h2>
@@ -23,9 +23,8 @@ HTML dan Tailwind CSS untuk tampilan yang lebih rapi
 
 <h2>Anggota Kelompok</h2>
 <ol>
-  <li>Nama Anggota 1</li>
-  <li>Nama Anggota 2</li>
-  <li>Nama Anggota 3</li>
-</ol>
-
-<p>Terima kasih telah mengunjungi proyek kami.</p>
+  <li> Diniyah Sekar Arum (Footer) </li>
+  <li> Nurul Aliza Lubis (Header) </li>
+  <li> Sabrina Natasya (Navigation) </li>
+  <li> Selfiana Putri (Aside) </li>
+  <li> Muhammad Raziq & Iqbal Ramadan (content) </li>
